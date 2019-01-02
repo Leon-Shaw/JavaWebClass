@@ -13,7 +13,7 @@ public class FilterLoginServlet extends HttpServlet {
         System.out.println(request.getParameter("username"));
         System.out.println(request.getParameter("password"));
         System.out.println(request.getAttribute("filterdata"));
-        response.sendRedirect("class3_1/index.html");
+        response.sendRedirect("class5_1/index.html");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

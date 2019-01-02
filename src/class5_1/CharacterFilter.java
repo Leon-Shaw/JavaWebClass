@@ -18,8 +18,7 @@ public class CharacterFilter implements Filter {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html; charset=utf-8");
         request.setAttribute("filterdata", "Filter Test");
-        CharacterRequest characterRequest = new CharacterRequest(request);
-        chain.doFilter(characterRequest, response);
+        chain.doFilter(request, response);
     }
 
     public void init(FilterConfig config) throws ServletException {
