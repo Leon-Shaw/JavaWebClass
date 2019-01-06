@@ -54,7 +54,7 @@ public class AttributeListener implements ServletContextListener,
       */
         String name = sbe.getName();
         System.out.println("Session中添加了一个属性name=" + name);
-        System.out.println("该属性的值value=" + sbe.getSession().getAttribute("username"));
+        System.out.println("该属性的值value=" + sbe.getSession().getAttribute(name));
         Integer visitcount = (Integer) sbe.getSession().getAttribute("CountVisits");
         System.out.println("目前共有 " + visitcount + " 人访问");
     }
