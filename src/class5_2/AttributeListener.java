@@ -52,9 +52,9 @@ public class AttributeListener implements ServletContextListener,
       /* This method is called when an attribute 
          is added to a session.
       */
-      String name=sbe.getName();
-      System.out.println("Session中添加了一个属性name="+name);
-      System.out.println("该属性的值value="+sbe.getSession().getAttribute("username"));
+        String name = sbe.getName();
+        System.out.println("Session中添加了一个属性name=" + name);
+        System.out.println("该属性的值value=" + sbe.getSession().getAttribute("username"));
     }
 
     public void attributeRemoved(HttpSessionBindingEvent sbe) {
