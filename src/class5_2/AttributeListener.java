@@ -55,8 +55,10 @@ public class AttributeListener implements ServletContextListener,
         String name = sbe.getName();
         System.out.println("Session中添加了一个属性name=" + name);
         System.out.println("该属性的值value=" + sbe.getSession().getAttribute(name));
-        Integer visitcount = (Integer) sbe.getSession().getAttribute("CountVisits");
-        System.out.println("目前共有 " + visitcount + " 人访问");
+        if (sbe.getName().equals("CountVisits")) {
+            Integer visitcount = (Integer) sbe.getSession().getAttribute("CountVisits");
+            System.out.println("目前共有 " + visitcount + " 人访问");
+        }
     }
 
     public void attributeRemoved(HttpSessionBindingEvent sbe) {
@@ -69,7 +71,10 @@ public class AttributeListener implements ServletContextListener,
       /* This method is invoked when an attibute
          is replaced in a session.
       */
-        Integer visitcount = (Integer) sbe.getSession().getAttribute("CountVisits");
-        System.out.println("目前共有 " + visitcount + " 人访问");
+        if (sbe.getName().equals("CountVisits")) {
+            Integer visitcount = (Integer) sbe.getSession().getAttribute("CountVisits");
+            System.out.println("目前共有 " + visitcount + " 人访问");
+        }
+
     }
 }
